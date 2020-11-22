@@ -1,4 +1,4 @@
-package methods_parentless
+package method_parentless
 
 class MethodParentless {
 

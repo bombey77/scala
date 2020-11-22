@@ -1,4 +1,4 @@
-package methods_simplification
+package method_simplification
 
 class MethodsSimplification {
 
