@@ -1,7 +1,7 @@
 package type_definition
 
-trait T
-class C
+//trait T
+//class C
 object O
 
 object TypeDefinition extends App {
