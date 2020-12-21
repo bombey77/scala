@@ -1,4 +1,5 @@
 package operators
+import  scala.language.postfixOps
 
 class Intro {
   //NOTE!!! Scala does not have any operators!!!
