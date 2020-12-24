@@ -1,4 +1,5 @@
 package pointless_vs_pointfree_style
+import scala.language.postfixOps
 
 object Demo0 {
 
