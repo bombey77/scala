@@ -8,7 +8,7 @@ object MatchExample {
   }
 
   def main(args: Array[String]): Unit = {
-    println(verify(12))
-    println(verify("text"))
+    println(verify(12)) //This is Int 12
+    println(verify("text")) //THIS IS STRING - text
   }
 }
