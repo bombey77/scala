@@ -6,6 +6,9 @@ package problems
 //scala> last(List(1, 1, 2, 3, 5, 8))
 //res0: Int = 8
 object P01 {
+
+//  http://aperiodic.net/phil/scala/s-99/
+
   // There are several ways to solve this problem.  If we use builtins, it's very
   // easy.
   def lastBuiltin[A](ls: List[A]): A = ls.last
