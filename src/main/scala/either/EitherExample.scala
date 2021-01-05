@@ -17,5 +17,9 @@ object EitherExample {
     println(Right(1) map { x => x + 1 }) // Right(2)
     println(Right(1).map((x: Int) => x + 1)) // Right(2)
     println(Left("foo").map((x: Int) => x + 1)) // Left(foo)
+
+    // Either also has a filterOrElse method that turns
+    // a Right value into a Left value if it does not satisfy a given predicate
+    println(Right(1).filterOrElse(x => (x % 2) == 0, "Returns Left Value")) // Returns Left Value
   }
 }
