@@ -43,3 +43,13 @@ class BoxLow[-T] {
     s
   }
 }
+
+//Typing Rules for Functions
+//If A2 <: A1 and B1 <: B2, then
+//A1 => B1 <: A2 => B2
+//So functions are contravariant in their argument type(s) and covariant in their result type.
+//This leads to the following revised definition of the Function1 trait:
+
+//trait Function1[-T, +U] {
+//  def apply(x: T): U
+//}
