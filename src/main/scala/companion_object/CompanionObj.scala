@@ -1,6 +1,8 @@
 package companion_object
 
 class CompanionObj(val name: String) {
+  // NOTE! the variable is private,
+  //  but it's visible from companion object
   private val x: String = "Private variable"
 }
 
