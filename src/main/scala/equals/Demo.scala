@@ -16,6 +16,10 @@ object Demo {
     println(h1 == h2) // true
     println(h1 eq h2) // false
     println(h1 equals h2) // true
+
+    val p = new Person("Kate", 29)
+    val s = p
+    println(p eq s) // true
   }
 
   class Person(name: String, age: Int)
