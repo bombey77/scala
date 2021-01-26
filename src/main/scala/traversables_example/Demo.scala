@@ -1,6 +1,7 @@
 package traversables_example
 
 import scala.collection.immutable.LazyList.cons
+import scala.language.postfixOps
 
 object Demo {
 

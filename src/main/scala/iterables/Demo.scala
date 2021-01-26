@@ -1,5 +1,7 @@
 package iterables
 
+import scala.language.postfixOps
+
 object Demo {
 
   def main(args: Array[String]): Unit = {
