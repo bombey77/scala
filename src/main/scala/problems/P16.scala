@@ -30,9 +30,19 @@ object P16 {
     ls.zipWithIndex filter { v => (v._2 + 1) % n != 0 } map { _._1 }
   }
 
+  def dropWithIteration[A](n: Int, ls: List[A]): List[A] = {
+    var list: List[A] = Nil
+    for (i <- ls.indices) {
+      if (i == 0) list = list :+ ls(i)
+      if ((i % 3) != 0) list = list :+ ls(i)
+    }
+    list
+  }
+
   def main(args: Array[String]): Unit = {
     println(drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)))
     println(dropRecursive(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)))
     println(dropTailRecursive(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)))
+    println(dropWithIteration(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)))
   }
 }
