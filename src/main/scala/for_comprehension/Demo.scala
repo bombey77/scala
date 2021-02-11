@@ -1,27 +1,25 @@
 package for_comprehension
 
-import scala.collection.immutable.Range
-import scala.runtime.RichInt
-
 object Demo {
 
   def main(args: Array[String]): Unit = {
-    for (i <- 1 to 10) {
-      println(i)
-    }
-    // the same as previous for
-    for (i <- 1.to(10)) {
-      println(i)
-    }
-    // the same as previous for
-    val range0: Range = 1 to 10
-    for (i <- range0) {
-      println(i)
-    }
-    // the same as previous for
-    val range1: Range = new RichInt(1).to(10)
-    for(i <- range1) {
-      println(i)
-    }
+    val xValues = 1 to 4
+    val yValues = 1 to 2
+    val coordinates = for {
+      x <- xValues
+      y <- yValues
+    } yield (x, y)
+
+    println(coordinates(4)) // (3,1)
+
+    val nums = List(List(1), List(2), List(3), List(4), List(5))
+
+    val result = for {
+      numList <- nums
+      num <- numList
+      if (num % 2 == 0)
+    } yield (num)
+
+    println(result) // List(2, 4)
   }
 }
