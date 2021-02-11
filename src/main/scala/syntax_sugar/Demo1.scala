@@ -1,5 +1,6 @@
 package syntax_sugar
 
+// As you can see I can read and write with methods like in variable
 object Demo1 extends App {
 
   val c = new C
@@ -10,12 +11,21 @@ object Demo1 extends App {
 //  write...
 //  write...
 //  read...
-//  0
+//  1
 }
 
 class C {
-  def x_=(x: Int): Unit = println("write...")
+  // variable
+  private var tmp: Int = _
+
+  // write with this method
+  def x_=(x: Int): Unit = {
+    tmp = x
+    println("write...")
+  }
+
+  // read with this method
   def x: Int = {
-    println("read...");0
+    println("read...");tmp
   }
 }
