@@ -19,4 +19,8 @@ object Demo extends App {
   val b1 = variant_2(10) _
   val b2 = b1(2)
   println(b2) // 20
+
+  val variant_3 = (x: Int) => (y: Int) => x * y
+  val c1 = variant_3(10)
+  println(c1(2)) // 20
 }
